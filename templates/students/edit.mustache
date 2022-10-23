@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Edit Student</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body style="background-color:black;">
+    <div class="container">
+        <div class="row">
+            <div class="header">
+                <h1 style="color:white;"><center>Update Student</center></h1>
+            </div>
+            <div class="col-3">
+                
+            </div> 
+        </div>
+    </div>
+    <div class="table">       
+        <form method="POST" action="../students/update.php">
+        <input type="hidden" name="id" value = "{{id}}"/>
+            <div class="form-group row" style="color:white";>
+                <label for="first_name" class="col-sm-2 col-form-label">First Name:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="first_name" name="first_name" value="{{first_name}}" required>
+                </div>
+            </div>
+            <div class="form-group row"; style="color:white";>
+                <label for="last_name" class="col-sm-2 col-form-label;">Last Name:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="last_name" name="last_name" value="{{last_name}}" required>
+                </div>
+            </div>
+             <div class="form-group row" style="color:white";>
+                <label for="student_number" class="col-sm-2 col-form-label">Student Number:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="student_number" name="student_number" value="{{student_number}}" required>
+                </div>
+            </div>
+            <div class="form-group row" style="color:white";>
+                <label for="email" class="col-sm-2 col-form-label">Email Address:</label>
+                <div class="col-sm-4">
+                <input type="email" class="form-control" id="email" name="email" value="{{email}}" required>
+                </div>
+            </div>
+            <div class="form-group row" style="color:white";>
+                <label for="contact_number" class="col-sm-2 col-form-label">Contact:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="contact_number" name="contact_number" value="{{contact_number}}" required>
+                </div>
+            </div>
+            <div class="form-group row" style="color:white";>
+                <label for="program" class="col-sm-2 col-form-label">Program:</label>
+                    <div class="col-sm-4">
+                        <select class="form-select" name="program" id="program" aria-label="Select Program">
+                        <option value="BSIT">BSIT</option>
+                        <option value="BMMA">BMMA</option>
+                        <option value="BSCS">BSCS</option>
+                        </select>
+                    </div>
+                </div>
+            <div class="form-group row" >
+                <div class="col-sm-4">
+                <a type="button" href="../teachers/index.php" class="btn btn-outline-warning btn-lg ms-2">Back</a> 
+                <button id="submit"  type="submit" class="btn btn-outline-success">Update</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
